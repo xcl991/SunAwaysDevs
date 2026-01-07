@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Cahya Bulan Devs</title>
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/xcl991/cahya%20bulan%20devs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-charcoal: #0D0D0D;
+            --color-charcoal-light: #1A1A1A;
+            --color-charcoal-medium: #2D2D2D;
+            --color-gold: #7C9CB8;
+            --color-gold-light: #9BB5CC;
+            --color-gold-dark: #5A7A96;
+            --color-offwhite: #F5F5F0;
+            --color-offwhite-dark: #E8E8E3;
+
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-charcoal);
+            color: var(--color-offwhite);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s var(--transition-smooth);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .text-gold {
+            color: var(--color-gold);
+        }
+
+        /* Letterbox */
+        .letterbox {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 5vh;
+            background: var(--color-charcoal);
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .letterbox--top { top: 0; }
+        .letterbox--bottom { bottom: 0; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 5vh;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 0;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(20px);
+        }
+
+        .nav__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav__logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav__logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .nav__logo-text span {
+            color: var(--color-gold);
+        }
+
+        .nav__back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--color-offwhite-dark);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .nav__back:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+        }
+
+        .nav__back svg {
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .nav__back:hover svg {
+            transform: translateX(-5px);
+        }
+
+        /* Content */
+        .page-header {
+            padding: calc(5vh + 120px) 0 4rem;
+            text-align: center;
+            background: var(--color-charcoal-light);
+        }
+
+        .page-header__title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .page-header__subtitle {
+            font-size: 1rem;
+            color: var(--color-offwhite-dark);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content__section {
+            margin-bottom: 3rem;
+        }
+
+        .content__section h2 {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-charcoal-medium);
+        }
+
+        .content__section p {
+            color: var(--color-offwhite-dark);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .content__section ul {
+            color: var(--color-offwhite-dark);
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content__section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content__section a {
+            color: var(--color-gold);
+        }
+
+        .content__section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--color-charcoal-light);
+            border-left: 3px solid var(--color-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-offwhite-dark);
+            padding: 2rem;
+            border-top: 1px solid var(--color-charcoal-medium);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-charcoal);
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-charcoal-medium);
+        }
+
+        .footer__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer__copyright {
+            font-size: 0.85rem;
+            color: var(--color-offwhite-dark);
+        }
+
+        .footer__links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer__link {
+            font-size: 0.85rem;
+            color: var(--color-offwhite-dark);
+        }
+
+        .footer__link:hover {
+            color: var(--color-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .letterbox {
+                height: 3vh;
+            }
+
+            .nav {
+                top: 3vh;
+            }
+
+            .page-header {
+                padding: calc(3vh + 100px) 0 3rem;
+            }
+
+            .nav__logo-text {
+                display: none;
+            }
+
+            .footer__container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer__links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cinematic Letterbox -->
+    <div class="letterbox letterbox--top"></div>
+    <div class="letterbox letterbox--bottom"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="https://ik.imagekit.io/xcl991/cahya%20bulan%20devs" alt="Cahya Bulan Devs Logo">
+                <span class="nav__logo-text">Cahya Bulan<span>Devs</span></span>
+            </a>
+            <a href="index.html" class="nav__back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Kembali
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Privacy <span class="text-gold">Policy</span></h1>
+            <p class="page-header__subtitle">Gimana gue handle data kamu (spoiler: santai aja)</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <section class="content__section">
+            <h2>Intro Dulu</h2>
+            <p>
+                Halo! Ini adalah Privacy Policy dari Cahya Bulan Devs. Gue tau dokumen kayak gini
+                biasanya bikin ngantuk, jadi gue coba bikin se-simple mungkin. Intinya, gue respect
+                privacy lo dan nggak ada niat buat ngapa-ngapain yang aneh sama data lo.
+            </p>
+            <div class="highlight-box">
+                <p>
+                    <strong>TL;DR:</strong> Gue cuma developer indie yang bikin apps dan games buat hobby.
+                    Gue nggak jual data lo, nggak share ke siapapun, dan nggak punya niat jahat. Simple.
+                </p>
+            </div>
+        </section>
+
+        <section class="content__section">
+            <h2>Data Apa yang Gue Kumpulin?</h2>
+            <p>
+                Tergantung gimana lo berinteraksi sama apps/games yang gue bikin:
+            </p>
+            <ul>
+                <li><strong>Informasi yang lo kasih:</strong> Kalau lo kirim pesan atau email ke gue,
+                ya gue punya nama dan email lo. Logical kan?</li>
+                <li><strong>Data penggunaan:</strong> Kadang apps/games ngumpulin data anonim kayak
+                berapa lama lo main, fitur apa yang sering dipake, dll. Ini buat gue tau mana yang
+                perlu di-improve.</li>
+                <li><strong>Crash reports:</strong> Kalau apps/games crash, mungkin ada data teknis
+                yang dikirim buat bantu gue fix bug-nya.</li>
+            </ul>
+        </section>
+
+        <section class="content__section">
+            <h2>Gue Pake Data Lo Buat Apa?</h2>
+            <ul>
+                <li>Bales pesan/email lo</li>
+                <li>Improve apps/games yang gue bikin</li>
+                <li>Fix bugs dan masalah teknis</li>
+                <li>Itu doang, literally</li>
+            </ul>
+            <p>
+                Gue <strong>NGGAK</strong> pake data lo buat:
+            </p>
+            <ul>
+                <li>Jual ke pihak ketiga</li>
+                <li>Targeted advertising</li>
+                <li>Hal-hal sketchy lainnya</li>
+            </ul>
+        </section>
+
+        <section class="content__section">
+            <h2>Third Party Services</h2>
+            <p>
+                Apps/games gue mungkin pake beberapa third party services kayak:
+            </p>
+            <ul>
+                <li><strong>Google Play Services:</strong> Kalau lo download dari Play Store</li>
+                <li><strong>Analytics:</strong> Buat tau statistik penggunaan (anonim)</li>
+                <li><strong>Ad Networks:</strong> Kalau ada iklan di apps (buat support development)</li>
+            </ul>
+            <p>
+                Masing-masing service ini punya privacy policy sendiri. Gue saranin lo baca juga kalau penasaran.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Data Security</h2>
+            <p>
+                Gue berusaha protect data lo sebisa mungkin. Tapi jujur aja, gue cuma indie developer
+                biasa, bukan perusahaan besar dengan tim security. Jadi gue pake best practices yang gue tau,
+                tapi nggak bisa jamin 100% aman (nobody can, tbh).
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Children's Privacy</h2>
+            <p>
+                Apps/games gue nggak sengaja ngumpulin data dari anak di bawah 13 tahun. Kalau lo
+                orang tua dan tau anak lo ngasih personal info, contact gue dan gue akan hapus.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Hak Lo</h2>
+            <p>
+                Lo punya hak buat:
+            </p>
+            <ul>
+                <li>Minta tau data apa yang gue punya tentang lo</li>
+                <li>Minta hapus data lo</li>
+                <li>Opt-out dari data collection (kalau ada fiturnya)</li>
+            </ul>
+            <p>
+                Tinggal email gue aja di <a href="mailto:meistsertan991@gmail.com">meistsertan991@gmail.com</a>,
+                nanti gue proses.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Perubahan Policy</h2>
+            <p>
+                Gue mungkin update policy ini dari waktu ke waktu. Kalau ada perubahan significant,
+                gue akan kasih tau lewat apps/games atau website. Tapi honestly, kemungkinan besar
+                policy ini bakal tetep sama karena gue males ngurusin data orang.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Contact</h2>
+            <p>
+                Punya pertanyaan tentang privacy? Langsung aja contact gue:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:meistsertan991@gmail.com">meistsertan991@gmail.com</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/6282382466325">+62 823 8246 6325</a></li>
+            </ul>
+            <p>
+                <strong>Alamat:</strong><br>
+                KP. GUSTI GG KANTONG NO 28<br>
+                RT.009/RW.015 PEJAGALAN<br>
+                PENJARINGAN, JAKARTA UTARA<br>
+                DKI JAKARTA 14450
+            </p>
+        </section>
+
+        <div class="last-updated">
+            <p>Terakhir diupdate: Januari 2024</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">
+                &copy; 2024 Cahya Bulan Devs. Made with coffee and random motivation.
+            </p>
+            <div class="footer__links">
+                <a href="index.html" class="footer__link">Home</a>
+                <a href="privacy.html" class="footer__link">Privacy Policy</a>
+                <a href="terms.html" class="footer__link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

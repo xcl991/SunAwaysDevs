@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Cahya Bulan Devs</title>
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/xcl991/cahya%20bulan%20devs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-charcoal: #0D0D0D;
+            --color-charcoal-light: #1A1A1A;
+            --color-charcoal-medium: #2D2D2D;
+            --color-gold: #7C9CB8;
+            --color-gold-light: #9BB5CC;
+            --color-gold-dark: #5A7A96;
+            --color-offwhite: #F5F5F0;
+            --color-offwhite-dark: #E8E8E3;
+
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-charcoal);
+            color: var(--color-offwhite);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s var(--transition-smooth);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .text-gold {
+            color: var(--color-gold);
+        }
+
+        /* Letterbox */
+        .letterbox {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 5vh;
+            background: var(--color-charcoal);
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .letterbox--top { top: 0; }
+        .letterbox--bottom { bottom: 0; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 5vh;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 0;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(20px);
+        }
+
+        .nav__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav__logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav__logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .nav__logo-text span {
+            color: var(--color-gold);
+        }
+
+        .nav__back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--color-offwhite-dark);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .nav__back:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+        }
+
+        .nav__back svg {
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .nav__back:hover svg {
+            transform: translateX(-5px);
+        }
+
+        /* Content */
+        .page-header {
+            padding: calc(5vh + 120px) 0 4rem;
+            text-align: center;
+            background: var(--color-charcoal-light);
+        }
+
+        .page-header__title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .page-header__subtitle {
+            font-size: 1rem;
+            color: var(--color-offwhite-dark);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content__section {
+            margin-bottom: 3rem;
+        }
+
+        .content__section h2 {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-charcoal-medium);
+        }
+
+        .content__section p {
+            color: var(--color-offwhite-dark);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .content__section ul {
+            color: var(--color-offwhite-dark);
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content__section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content__section a {
+            color: var(--color-gold);
+        }
+
+        .content__section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: var(--color-charcoal-light);
+            border-left: 3px solid var(--color-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: rgba(255, 100, 100, 0.1);
+            border-left: 3px solid #ff6464;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box p {
+            margin-bottom: 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-offwhite-dark);
+            padding: 2rem;
+            border-top: 1px solid var(--color-charcoal-medium);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-charcoal);
+            padding: 2rem 0;
+            border-top: 1px solid var(--color-charcoal-medium);
+        }
+
+        .footer__container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer__copyright {
+            font-size: 0.85rem;
+            color: var(--color-offwhite-dark);
+        }
+
+        .footer__links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer__link {
+            font-size: 0.85rem;
+            color: var(--color-offwhite-dark);
+        }
+
+        .footer__link:hover {
+            color: var(--color-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .letterbox {
+                height: 3vh;
+            }
+
+            .nav {
+                top: 3vh;
+            }
+
+            .page-header {
+                padding: calc(3vh + 100px) 0 3rem;
+            }
+
+            .nav__logo-text {
+                display: none;
+            }
+
+            .footer__container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer__links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cinematic Letterbox -->
+    <div class="letterbox letterbox--top"></div>
+    <div class="letterbox letterbox--bottom"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="https://ik.imagekit.io/xcl991/cahya%20bulan%20devs" alt="Cahya Bulan Devs Logo">
+                <span class="nav__logo-text">Cahya Bulan<span>Devs</span></span>
+            </a>
+            <a href="index.html" class="nav__back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Kembali
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Terms of <span class="text-gold">Service</span></h1>
+            <p class="page-header__subtitle">Aturan main yang (hopefully) nggak ribet</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <section class="content__section">
+            <h2>Intro</h2>
+            <p>
+                Selamat datang di Terms of Service Cahya Bulan Devs! Ini adalah "aturan main" buat
+                lo yang pake apps, games, atau services yang gue bikin. Gue coba bikin sesimple
+                mungkin biar nggak pusing bacanya.
+            </p>
+            <div class="highlight-box">
+                <p>
+                    <strong>TL;DR:</strong> Pake apps/games gue dengan baik, jangan pake buat hal-hal
+                    ilegal atau merugikan orang lain, dan kita semua happy.
+                </p>
+            </div>
+        </section>
+
+        <section class="content__section">
+            <h2>Acceptance of Terms</h2>
+            <p>
+                Dengan download, install, atau pake apps/games dari Cahya Bulan Devs, artinya lo
+                setuju sama terms ini. Kalau nggak setuju, ya jangan dipake aja, nggak apa-apa kok.
+                No hard feelings.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Yang Boleh Lo Lakuin</h2>
+            <ul>
+                <li>Pake apps/games buat personal use</li>
+                <li>Have fun dan enjoy the experience</li>
+                <li>Kasih feedback, kritik, atau saran (very welcome!)</li>
+                <li>Share ke temen-temen lo (word of mouth is the best marketing)</li>
+                <li>Report bugs kalau nemu (sangat membantu!)</li>
+            </ul>
+        </section>
+
+        <section class="content__section">
+            <h2>Yang NGGAK Boleh Lo Lakuin</h2>
+            <div class="warning-box">
+                <p>
+                    <strong>Serius bagian ini:</strong> Tolong jangan lakuin hal-hal di bawah ini.
+                </p>
+            </div>
+            <ul>
+                <li>Reverse engineer, decompile, atau modify apps/games</li>
+                <li>Redistribute atau sell apps/games tanpa izin</li>
+                <li>Pake buat aktivitas ilegal</li>
+                <li>Exploit bugs atau vulnerabilities (report aja, jangan diexploit)</li>
+                <li>Cheat di games (kalau ada multiplayer features)</li>
+                <li>Impersonate sebagai gue atau claim apps/games sebagai buatan lo</li>
+                <li>Pake buat spam, phishing, atau hal-hal jahat lainnya</li>
+            </ul>
+        </section>
+
+        <section class="content__section">
+            <h2>Intellectual Property</h2>
+            <p>
+                Semua apps, games, code, design, dan content yang gue bikin adalah milik gue
+                (Cahya Bulan Devs). Lo boleh pake sesuai intended purpose, tapi ownership tetap
+                ada di gue.
+            </p>
+            <p>
+                Kalau lo submit feedback, ideas, atau suggestions, gue berhak pake itu buat improve
+                apps/games tanpa harus bayar royalty atau kasih credit (tapi biasanya gue kasih
+                credit sih kalau memang significant contribution).
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Disclaimer</h2>
+            <p>
+                Gue bikin apps/games ini as-is dan as-available. Gue berusaha bikin sebaik mungkin,
+                tapi gue nggak bisa jamin:
+            </p>
+            <ul>
+                <li>Apps/games bakal selalu available 24/7</li>
+                <li>100% bebas bugs (impossible, tbh)</li>
+                <li>Bakal compatible sama semua devices</li>
+                <li>Fitur tertentu bakal tetap ada selamanya</li>
+            </ul>
+            <p>
+                Gue cuma indie developer yang ngerjain ini as a hobby. Please set expectations accordingly.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Limitation of Liability</h2>
+            <p>
+                Dalam kondisi apapun, gue nggak liable atas:
+            </p>
+            <ul>
+                <li>Data loss yang mungkin terjadi</li>
+                <li>Device damage (though very unlikely)</li>
+                <li>Indirect, incidental, atau consequential damages</li>
+                <li>Lost profits atau lost opportunities</li>
+            </ul>
+            <p>
+                Intinya, pake apps/games ini at your own risk. Gue berusaha yang terbaik, tapi
+                nggak bisa tanggung jawab atas semua hal yang mungkin terjadi.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Updates dan Perubahan</h2>
+            <p>
+                Gue berhak buat:
+            </p>
+            <ul>
+                <li>Update apps/games kapanpun (kalau lagi mood)</li>
+                <li>Tambah atau remove fitur</li>
+                <li>Discontinue apps/games kalau memang udah nggak bisa dilanjutin</li>
+                <li>Update terms ini kalau perlu</li>
+            </ul>
+            <p>
+                Kalau ada perubahan significant di terms, gue akan kasih tau lewat apps/games
+                atau website.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>In-App Purchases & Ads</h2>
+            <p>
+                Beberapa apps/games mungkin ada:
+            </p>
+            <ul>
+                <li><strong>In-app purchases:</strong> Optional, buat support development. Lo nggak
+                wajib beli apapun.</li>
+                <li><strong>Advertisements:</strong> Buat generate some revenue. Gue try to keep it
+                not annoying.</li>
+            </ul>
+            <p>
+                Semua purchases are final. Tapi kalau ada issue legitimate, contact gue dan kita
+                bisa discuss.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Termination</h2>
+            <p>
+                Gue berhak terminate access lo ke apps/games kalau lo violate terms ini. Tapi
+                honestly, gue nggak bakal ribet ngurusin ini kecuali lo beneran bikin masalah besar.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Governing Law</h2>
+            <p>
+                Terms ini governed by hukum Indonesia. Kalau ada dispute, kita coba selesain
+                baik-baik dulu. Gue orangnya easy-going kok, pasti bisa dibicarain.
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Contact</h2>
+            <p>
+                Punya pertanyaan tentang terms ini? Contact gue:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:meistsertan991@gmail.com">meistsertan991@gmail.com</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/6282382466325">+62 823 8246 6325</a></li>
+            </ul>
+            <p>
+                <strong>Alamat:</strong><br>
+                KP. GUSTI GG KANTONG NO 28<br>
+                RT.009/RW.015 PEJAGALAN<br>
+                PENJARINGAN, JAKARTA UTARA<br>
+                DKI JAKARTA 14450
+            </p>
+        </section>
+
+        <section class="content__section">
+            <h2>Final Notes</h2>
+            <p>
+                At the end of the day, gue cuma pengen bikin apps/games yang fun dan useful.
+                Lo pake dengan baik, gue develop dengan sepenuh hati. Semoga kita bisa saling
+                support dan enjoy the journey together.
+            </p>
+            <p>
+                Thanks udah baca sampe sini! Most people skip bagian ini, so kudos to you.
+            </p>
+        </section>
+
+        <div class="last-updated">
+            <p>Terakhir diupdate: Januari 2024</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">
+                &copy; 2024 Cahya Bulan Devs. Made with coffee and random motivation.
+            </p>
+            <div class="footer__links">
+                <a href="index.html" class="footer__link">Home</a>
+                <a href="privacy.html" class="footer__link">Privacy Policy</a>
+                <a href="terms.html" class="footer__link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
